@@ -1,5 +1,5 @@
-MAC Org
-=======
+MAC Organization
+================
 
 A tool to return the organization associated with a given MAC address.
 
