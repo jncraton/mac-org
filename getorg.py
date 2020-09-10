@@ -5,7 +5,7 @@ def parse_mac(mac):
     Parses a MAC address in one of several common formats and returns 
     it as all uppercase with any separators removed.
 
-    Hint: It may be helpful to use regular expressions here.
+    Hint: It may be helpful to use regular expressions (perhaps re.match) here.
   
     Example usage:
   
