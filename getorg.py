@@ -2,39 +2,41 @@ import sys
 import re
 import csv
 
+
 def parse_mac(mac):
-    """ 
-    Parses a MAC address in one of several common formats and returns 
+    """
+    Parses a MAC address in one of several common formats and returns
     it as all uppercase with any separators removed.
-  
+
     Example usage:
-  
+
     >>> parse_mac('00:11:22:aa:bb:cc')
     '001122AABBCC'
-  
+
     >>> parse_mac('09-87-65-43-21-ab')
     '0987654321AB'
-  
+
     >>> parse_mac('aabbccddeeff')
     'AABBCCDDEEFF'
-  
+
     Invalid MAC values should raise a ValueError:
-  
+
     >>> parse_mac('xx:xx:xx:xx:xx:xx')
     Traceback (most recent call last):
       ...
     ValueError: xx:xx:xx:xx:xx:xx is not a valid MAC address
-  
+
     >>> parse_mac('001122aabb')
     Traceback (most recent call last):
       ...
     ValueError: 001122aabb is not a valid MAC address
-  
+
     >>> parse_mac('00:11:22:aa:bb:gg')
     Traceback (most recent call last):
       ...
     ValueError: 00:11:22:aa:bb:gg is not a valid MAC address
     """
+
 
 def get_mac_oui(mac):
     """
@@ -55,21 +57,23 @@ def get_mac_oui(mac):
     'AABBCC'
     """
 
+
 def build_lookup_table():
     """
     Returns a dictionary mapping OUIs to organziations
-  
+
     >>> build_lookup_table()['98AF65']
     'Intel Corporate'
-    
+
     >>> build_lookup_table()['00C0CA']
     'ALFA, INC.'
-    
+
     >>> build_lookup_table()['FFFFFF']
     Traceback (most recent call last):
       ...
     KeyError: 'FFFFFF'
     """
+
 
 def get_mac_organization(mac):
     """
@@ -94,5 +98,6 @@ def get_mac_organization(mac):
     KeyError: 'FFFFFF'
     """
 
-if __name__ == '__main__':
-  print(get_mac_organization(sys.argv[1]))
+
+if __name__ == "__main__":
+    print(get_mac_organization(sys.argv[1]))
