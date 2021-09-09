@@ -15,6 +15,7 @@ The project currently contains a number of failing doctests that can be run eith
 
 It is recommended to use the following Python tools to complete this assignment:
 
-- [Regular expressions](https://www.py4e.com/html3/11-regex) for cleaning up entered MAC addresses
-- The [CSV module](https://docs.python.org/3/library/csv.html) for reading the data file
-- [Slicing](https://www.py4e.com/html3/06-strings#string-slices) to split the approprate part of the MAC address
+- [Regular expressions](https://www.py4e.com/html3/11-regex) for cleaning up entered MAC addresses in `parse_mac`
+- [Slicing](https://www.py4e.com/html3/06-strings#string-slices) to split the approprate part of the MAC address in `get_mac_oui`
+- [`for` loops] (or a dictionary comprehension) in `build_lookup_table`
+- The [CSV module](https://docs.python.org/3/library/csv.html) for reading the data file in `get_mac_organization`
