@@ -1,11 +1,11 @@
 import sys
+import re
+import csv
 
 def parse_mac(mac):
     """ 
     Parses a MAC address in one of several common formats and returns 
     it as all uppercase with any separators removed.
-
-    Hint: It may be helpful to use regular expressions (perhaps re.match) here.
   
     Example usage:
   
@@ -36,17 +36,12 @@ def parse_mac(mac):
     ValueError: 00:11:22:aa:bb:gg is not a valid MAC address
     """
 
-    pass
-
 def get_mac_oui(mac):
     """
     Returns the Organisationally Unique Identifier (OUI) for a MAC
     address.
 
     The OUI is the first 3 octets (bytes) of the MAC address.
-
-    Hint1: You probably want to call your parse_mac function in here.
-    Hint2: You may want to become familiar with slicing notation in Python.
 
     Example usage:
 
@@ -60,7 +55,21 @@ def get_mac_oui(mac):
     'AABBCC'
     """
 
-    pass
+def build_lookup_table():
+    """
+    Returns a dictionary mapping OUIs to organziations
+  
+    >>> build_lookup_table()['98AF65']
+    'Intel Corporate'
+    
+    >>> build_lookup_table()['00C0CA']
+    'ALFA, INC.'
+    
+    >>> build_lookup_table()['FFFFFF']
+    Traceback (most recent call last):
+      ...
+    KeyError: 'FFFFFF'
+    """
 
 def get_mac_organization(mac):
     """
@@ -70,9 +79,6 @@ def get_mac_organization(mac):
     IEEE:
 
     http://standards-oui.ieee.org/oui/oui.csv
-
-    Hint1: You should download the above file and search through it.
-    Hint2: The csv module provides a DictReader class.
 
     Example usage:
 
@@ -85,10 +91,8 @@ def get_mac_organization(mac):
     >>> get_mac_organization('ff:ff:ff:00:11:22')
     Traceback (most recent call last):
       ...
-    IndexError: No organization for ff:ff:ff:00:11:22
+    KeyError: 'FFFFFF'
     """
 
-    pass
-
 if __name__ == '__main__':
-    print(get_mac_organization(sys.argv[1]))
+  print(get_mac_organization(sys.argv[1]))
