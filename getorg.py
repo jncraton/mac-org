@@ -3,7 +3,7 @@ import re
 import csv
 
 
-def parse_mac(mac):
+def parse_mac(mac: str) -> str:
     """
     Parses a MAC address in one of several common formats and returns
     it as all uppercase with any separators removed.
@@ -38,7 +38,7 @@ def parse_mac(mac):
     """
 
 
-def get_mac_oui(mac):
+def get_mac_oui(mac: str) -> str:
     """
     Returns the Organisationally Unique Identifier (OUI) for a MAC
     address.
@@ -75,7 +75,7 @@ def build_lookup_table():
     """
 
 
-def get_mac_organization(mac):
+def get_mac_organization(mac: str) -> str:
     """
     Returns the vendor for a particular MAC address.
 
