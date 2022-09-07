@@ -55,23 +55,11 @@ def get_mac_oui(mac: str) -> str:
 
     >>> get_mac_oui('aabbccddeeff')
     'AABBCC'
-    """
 
-
-def build_lookup_table():
-    """
-    Returns a dictionary mapping OUIs to organziations
-
-    >>> build_lookup_table()['98AF65']
-    'Intel Corporate'
-
-    >>> build_lookup_table()['00C0CA']
-    'ALFA, INC.'
-
-    >>> build_lookup_table()['FFFFFF']
+    >>> parse_mac('001122aabb')
     Traceback (most recent call last):
       ...
-    KeyError: 'FFFFFF'
+    ValueError: 001122aabb is not a valid MAC address
     """
 
 
