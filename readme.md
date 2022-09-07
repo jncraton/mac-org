@@ -11,7 +11,7 @@ The first 3 octets typically represent the Organisationally Unique Identifier (O
 
 This project intentionally contains only tests. The function bodies need to be implemented. It is expected that each function will be given an appropriate implementation. The functions should call one another. Control should generally flow from bottom to top while data flows from top to bottom.
 
-The project currently contains a number of failing doctests that can be run either by calling `make` or the doctest module directly.
+The project currently contains a number of failing doctests that can be run either by calling `make` or the doctest module directly. Make will also download the needed [oui.csv](http://standards-oui.ieee.org/oui/oui.csv) file, or it can be downloaded manually.
 
 It is recommended to use the following Python tools to complete this assignment:
 
