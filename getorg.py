@@ -80,10 +80,15 @@ def get_mac_organization(mac: str) -> str:
     >>> get_mac_organization('00:c0:ca:00:11:22')
     'ALFA, INC.'
 
+    >>> parse_mac('001122aabb')
+    Traceback (most recent call last):
+      ...
+    ValueError: 001122aabb is not a valid MAC address
+
     >>> get_mac_organization('ff:ff:ff:00:11:22')
     Traceback (most recent call last):
       ...
-    KeyError: 'FFFFFF'
+    KeyError: 'No entry found for ff:ff:ff:00:11:22'
     """
 
 
