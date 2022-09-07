@@ -17,7 +17,7 @@ It is recommended to use the following Python tools to complete this assignment:
 
 - [Regular expressions](https://www.py4e.com/html3/11-regex) for cleaning up entered MAC addresses in `parse_mac`
 - [Slicing](https://www.py4e.com/html3/06-strings#string-slices) to split the approprate part of the MAC address in `get_mac_oui`
-- [`for` loops](https://www.py4e.com/html3/05-iterations#definite-loops-using-for) (or a dictionary comprehension) to create a lookup table in `build_lookup_table`
 - The [CSV module](https://docs.python.org/3/library/csv.html) for reading the data file in `get_mac_organization`
+- [`for` loops](https://www.py4e.com/html3/05-iterations#definite-loops-using-for) (or a dictionary comprehension) to search iterate over the CSV file looking for matches
 - [Exceptions](https://docs.python.org/3/tutorial/errors.html) for properly handling invalid input
 - [f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) to simplify string creation
