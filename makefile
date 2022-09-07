@@ -9,3 +9,5 @@ oui.csv:
 clean:
 	rm -f oui.csv
 	rm -rf __pycache__
+	rm -rf .mypy_cache
+	
